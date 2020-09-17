@@ -1,28 +1,23 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+const MIN_TEMPERATURE = -20;
+const MAX_TEMPERATURE = 40;
+const MIN_HEART = 80;
+const MAX_HEART = 180;
+const MIN_STEP = 0;
+const MAX_STEP = 50000;
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <h1><p>Bonjour!</p></h1>
+        <div class="container-fluid"></div>
+        <div><p>Battements de coeur : 80</p>
+        <p>Température : -20</p>
+        <p>Nombre de pas : 0</p>
       </div>
+      </div>  
     );
   }
 }
-
 export default App;
