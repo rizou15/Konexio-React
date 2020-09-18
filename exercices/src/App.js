@@ -11,12 +11,13 @@ class App extends React.Component {
     return (
       <div>
         <h1><p>Bonjour!</p></h1>
-        <div class="container-fluid"></div>
-        <div><p>Battements de coeur : 80</p>
-        <p>Température : -20</p>
-        <p>Nombre de pas : 0</p>
+        <div className="container-fluid">
+          <div><p>Battements de coeur : 80</p>
+            <p>Température : -20</p>
+            <p>Nombre de pas : 0</p>
+          </div>
+        </div>
       </div>
-      </div>  
     );
   }
 }
