@@ -1,4 +1,10 @@
 import React from 'react';
+import Person from './components/Person';
+import HeartRate from './components/HeartRate';
+import Icon from './components/core/Icon';
+import './App.css';
+
+
 const MIN_TEMPERATURE = -20;
 const MAX_TEMPERATURE = 40;
 const MIN_HEART = 80;
@@ -7,18 +13,28 @@ const MIN_STEP = 0;
 const MAX_STEP = 50000;
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      water: 0,
+      heart: 120,
+      temperature: -10,
+      steps: 3000,
+
+    }
+
+  }
+
   render() {
     return (
-      <div>
-        <h1><p>Bonjour!</p></h1>
-        <div className="container-fluid">
-          <div><p>Battements de coeur : 80</p>
-            <p>Température : -20</p>
-            <p>Nombre de pas : 0</p>
-          </div>
-        </div>
+      <div className='App'>
+        <Person steps={MIN_STEP}></Person>
+        <HeartRate heart={MIN_HEART}></HeartRate>
+        <Icon />
       </div>
     );
   }
 }
 export default App;
+
+

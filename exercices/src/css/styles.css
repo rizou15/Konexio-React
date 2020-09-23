@@ -1,0 +1,23 @@
+.box-pair {
+
+    background-color:#CCC
+
+}
+
+.box-impair {
+
+    background-color: #AAA
+}
+
+.box {
+
+    height: 190 px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.water {
+
+    background-color: #3A85FF;
+
+}
