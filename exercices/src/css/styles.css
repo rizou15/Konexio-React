@@ -1,10 +1,10 @@
-.box-pair {
+.box:nth-child(even) {
 
     background-color:#CCC
 
 }
 
-.box-impair {
+.box:nth-child(odd) {
 
     background-color: #AAA
 }
@@ -16,8 +16,7 @@
     justify-content: center;
 }
 
-.water {
 
-    background-color: #3A85FF;
 
-}
+    
+

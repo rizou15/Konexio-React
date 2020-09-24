@@ -3,6 +3,9 @@ import Person from './components/Person';
 import HeartRate from './components/HeartRate';
 import Icon from './components/core/Icon';
 import './App.css';
+import './css/styles.css';
+import './css/bootstrap.min.css';
+
 
 
 const MIN_TEMPERATURE = -20;
@@ -22,10 +25,13 @@ class App extends React.Component {
       steps: 3000,
 
     }
-
+    
+      
+    
   }
 
   render() {
+    
     return (
       <div className='App'>
         <Person steps={MIN_STEP}></Person>

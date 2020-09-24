@@ -10,9 +10,12 @@ class HeartRate extends Component {
 
             <div className="box  col-md-2  col-6" style={{ fontSize: 100, color: 'red' }}>
             <Icon name='favorite'/>
-            <p BPM={this.props.heart}></p>
-            <Slider>
-
+            <p>{this.props.heart}BPM</p>
+            
+            <Slider max={this.props.max}
+                     min={this.props.min}
+                     onChange={this.props.onChange}
+                    value={this.props.heart}>
             </Slider>
             </div>
 
