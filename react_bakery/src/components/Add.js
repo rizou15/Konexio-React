@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import RCSlider from 'rc-slider';
 import 'rc-slider/assets/index.css';
+import '../css/App.css';
 
 class Add extends Component {
     constructor() {
@@ -41,9 +42,9 @@ class Add extends Component {
 
     }
     submitForm() {
-        this.props.addItem(this.state.itemName,this.state.price)
-        //console.log(this.state.itemName)
-        //console.log(this.state.price)
+       // this.props.addItem(this.state.itemName,this.state.price)
+        console.log(this.state.itemName)
+        console.log(this.state.price)
 
     }
 
@@ -53,16 +54,15 @@ class Add extends Component {
 
         return (
 
-            <div>
+            <div className="App">
                 <input type="text" onChange={this.updateItemName}></input>
-                <button class="btn btn-outline-secondary" type="button" onClick={this.submitForm}>Add</button>
-                <RCSlider max={10}
+                <button class="btn btn-primary" type="button" onClick={this.submitForm}>Add</button>
+                <RCSlider
                           min={1}
-                          onchange={this.updatePrice}>                  
-                </RCSlider>
-                {this.state.price}
+                          max={10}
+                          onChange={this.updatePrice}>{this.state.price}€                
+                </RCSlider>    
             </div>
-
 
         );
     }

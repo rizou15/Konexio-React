@@ -5,7 +5,7 @@ import List from './components/List';
 import Pay from './components/Pay';
 import Button from './components/core/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import './css/App.css';
 
 
 
@@ -15,13 +15,12 @@ class App extends Component {
     this.onClickTabAdd = this.onClickTabAdd.bind(this);
     this.onClickTabList = this.onClickTabList.bind(this);
     this.onClickTabPay = this.onClickTabPay.bind(this);
+    this.renderContent = this.renderContent.bind(this);
     this.addItem = this.addItem.bind(this);
-
 
     this.state = {
       activeTab: 'add',
       items: []
-
     }
   }
 
@@ -50,8 +49,17 @@ class App extends Component {
   }
 
   addItem(itemName, price) {
-    console.log(itemName,price)
-      
+    let items = this.state.items
+    items.push({
+      itemName,
+      price
+    })
+
+    this.setState({
+      items
+    });
+
+    console.log(items)
 
   }
 
@@ -60,7 +68,7 @@ class App extends Component {
       case 'add':
         return <Add addItem={this.addItem}></Add>;
       case 'list':
-        return <List></List>;
+        return <List>{this.state.items}</List>;
       case 'pay':
         return <Pay></Pay>;
       default:
@@ -73,9 +81,9 @@ class App extends Component {
     return (
 
       <div className="App">
-        <Button name='Add' isSelected={this.activeTab === 'add'} onClick={this.onClickTabAdd}>Add</Button>
-        <Button name='List' isSelected={this.activeTab === 'list'} onClick={this.onClickTabList}>List</Button>
-        <Button name='Pay' isSelected={this.activeTab === 'pay'} onClick={this.onClickTabPay}>Pay</Button>
+        <Button isSelected={this.state.activeTab === 'add'} clickFn={this.onClickTabAdd}>Add</Button>
+        <Button isSelected={this.state.activeTab === 'list'} clickFn={this.onClickTabList}>List</Button>
+        <Button isSelected={this.state.activeTab === 'pay'} clickFn={this.onClickTabPay}>Pay</Button>
 
         {this.renderContent()}
 
@@ -86,3 +94,4 @@ class App extends Component {
 }
 
 export default App;
+

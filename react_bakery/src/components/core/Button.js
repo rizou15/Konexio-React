@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
+import RCSlider from 'rc-slider';
+import 'rc-slider/assets/index.css';
 
 class Button extends Component {
 
     render() {
-
+        const newButton=this.props.isSelected ? "btn btn-primary" : "btn btn-outline-secondary";
         return (
-            <div>
+            
                 <button 
                 type="button" 
-                className={this.props.isSelected ? "btn btn-primary active": "btn btn-primary"}
-                onClick={this.props.onClick}>{this.props.children}</button>
-            </div>
+                className={newButton} 
+                onClick={this.props.clickFn}>{this.props.children}</button>
+            
         )
 
     }
