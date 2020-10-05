@@ -1,11 +1,17 @@
 import React,{Component} from 'react';
+import Card from './product/Card';
 
 class Pay extends Component {
 
         render(){
+            console.log(this.state);
 
             return (
-            <div>Pay</div>
+            <div>
+                <h1>Pay</h1>
+
+
+            </div>
 
             )};
 }

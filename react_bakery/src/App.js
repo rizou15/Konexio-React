@@ -49,17 +49,19 @@ class App extends Component {
   }
 
   addItem(itemName, price) {
-    let items = this.state.items
-    items.push({
-      itemName,
-      price
+    console.log('ajouter produits',itemName,price);
+    
+    let newItems = this.state.items;
+   newItems.push({
+      itemName: itemName,
+      price: price
     })
 
     this.setState({
-      items
-    });
+      items: newItems
+    })
 
-    console.log(items)
+    console.log('nouveaux produits:',this.state.items)
 
   }
 
@@ -68,7 +70,7 @@ class App extends Component {
       case 'add':
         return <Add addItem={this.addItem}></Add>;
       case 'list':
-        return <List>{this.state.items}</List>;
+        return <List items={this.state.items}></List>;
       case 'pay':
         return <Pay></Pay>;
       default:

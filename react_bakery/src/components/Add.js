@@ -42,9 +42,9 @@ class Add extends Component {
 
     }
     submitForm() {
-       // this.props.addItem(this.state.itemName,this.state.price)
-        console.log(this.state.itemName)
-        console.log(this.state.price)
+       this.props.addItem(this.state.itemName)
+       this.props.addItem(this.state.price)
+        
 
     }
 
