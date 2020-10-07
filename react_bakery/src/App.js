@@ -72,7 +72,7 @@ class App extends Component {
       case 'list':
         return <List items={this.state.items}></List>;
       case 'pay':
-        return <Pay></Pay>;
+        return <Pay items={this.state.items}></Pay>;
       default:
         return (<h1>Error</h1>)
     }
