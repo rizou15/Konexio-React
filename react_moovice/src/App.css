@@ -1,5 +1,14 @@
+@import url('<https://fonts.googleapis.com/css?family=Nunito>');
+
+.body{
+
+  font-family: 'Nunito';
+
+}
+
+
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -30,13 +39,5 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-@import url('<https://fonts.googleapis.com/css?family=Nunito>');
-
-body{
-
-  font-family: 'Nunito';
-
 }
 
