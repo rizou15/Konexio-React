@@ -16,15 +16,17 @@ class Card extends Component {
 
             this.setState({
                 img: picture
+                
+                
             })
 
         }
     render(){
         return(
             <div className='d-inline-flex text-center'>
-                <img style={{ width: '80 rem'}} src={this.state.img} alt={this.props.name.title}/>
-                <p>{this.props.name.title}</p>
-                <p>{this.props.name.overview}</p>
+                <img style={{ width: '80 rem'}} src={this.props.poster} alt="/"/>
+                <p>{this.props.title}</p>
+                <p>{this.props.resume}</p>
             </div>
 
 

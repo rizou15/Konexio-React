@@ -7,16 +7,17 @@ class PopularBattle extends Component {
     this.state = {
       movies: [],
       currentPage: 1,
-     // otherPage: 2 ?
-
-    };
+      otherPage: 2
+    
+    
+    }
 
     this.movieChoice = this.movieChoice.bind(this);
   }
 
   movieChoice() {
     this.setState({
-      currentPage: this.state.currentPage + 1
+      currentPage: this.state.currentPage + 2
 
     });
 
@@ -37,15 +38,16 @@ class PopularBattle extends Component {
       })
   }
 
-    render(){
-      return (
-        <div>
-          <Card results={this.state.currentPage}></Card> {/* revoir méthode}
-          {this.movieChoice}  
-        </div>
-      );
+  render() {
+    return (
+      <div>
+        <Card results={this.props.currentPage}
+          onClick={this.movieChoice}>
+        </Card>
+      </div>
+    );
 
-    }
   }
+}
 
 export default PopularBattle; 
