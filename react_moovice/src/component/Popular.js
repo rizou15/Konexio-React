@@ -22,38 +22,38 @@ class Popular extends Component {
           // console.log('movie quest',e)
           //console.log('result quest',e) = mêmes infos
 
+
           return {
             title: e.title,
             resume: e.overview,
-            poster: `https://image.tmdb.org/t/p/w300/${e.poster_path}`
+            poster: e.poster_path ? `https://image.tmdb.org/t/p/w300/${e.poster_path}` : placeholder
 
           }
 
         })
-        this.setState({
-          movies
-          // console.log(movies); = les 20 films s'affichent correctement
-        })
 
-  
+        this.setState({ movies })
+
+        // console.log(movies); = les 20 films s'affichent correctement
+      })
+
+  }
 
   render() {
-    const movies{ 
+    //console.log(this.state); // = affichage toujours ok
+    const { movies
 
     } = this.state
-  
-    //console.log(this.state); // = affichage toujours ok
-    return (
 
+    return (
       <div>
         {movies.map((e, i) => {
-          return 
-          <Card key={i} title={e.title} resume={e.resume} poster={e.poster}></Card>
+          
+          return <Card key={i} title={e.title} resume={e.resume} poster={e.poster}></Card>
 
         })}
 
       </div>
-
 
     );
 

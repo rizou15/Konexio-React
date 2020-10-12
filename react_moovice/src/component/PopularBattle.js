@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from './movie/Card';
+import placeholder from '../img/placeholder.png';
 
 class PopularBattle extends Component {
   constructor() {
