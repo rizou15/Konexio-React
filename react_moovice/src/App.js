@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <div>
         <Router>
-          <div>
+          <div  classname="container-fluid"> 
             <nav>
               <ul>
                 <li><Link to="/">This week</Link></li>

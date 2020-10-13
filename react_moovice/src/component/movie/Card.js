@@ -13,7 +13,7 @@ class Card extends Component {
            
         return(
             <div>
-                <img style={{ width: '80 rem'}} src={poster} alt=""/>
+                <img src={poster} alt=""/>
                 <p>{title}</p>
                 <p>{resume}</p>
             </div>

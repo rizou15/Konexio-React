@@ -46,11 +46,12 @@ class Popular extends Component {
     } = this.state
 
     return (
-      <div>
+      <div className="row">
         {movies.map((e, i) => {
-          
-          return <Card key={i} title={e.title} resume={e.resume} poster={e.poster}></Card>
 
+          return <div className="col-6">
+            <Card key={i} title={e.title} resume={e.resume} poster={e.poster}></Card>
+          </div>
         })}
 
       </div>
